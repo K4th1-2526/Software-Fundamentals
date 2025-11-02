@@ -205,3 +205,35 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#JAVA
+# Creado por https://www.toptal.com/developers/gitignore/api/java
+# Editar en https://www.toptal.com/developers/gitignore?templates=java
+
+### Java ###
+# Archivo de clase compilado
+*.clase
+
+# Archivo de registro
+*.registro
+
+# Archivos BlueJ
+*.ctxt
+
+# Herramientas móviles para Java (J2ME)
+.mtj.tmp/
+
+# Archivos del paquete #
+*.frasco
+*.guerra
+*.nar
+*.oreja
+*.cremallera
+*.tar.gz
+*.rar
+
+# Registros de fallos de la máquina virtual, consulte http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# Fin de https://www.toptal.com/developers/gitignore/api/java
