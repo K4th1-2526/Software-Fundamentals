@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercio # 1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-10 09:57:55 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMDswMTowMDoxNSBwLsKgbS47MzM4MA=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMDswOTo1Nzo1NSBwLsKgbS47MTszNTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dado" type="Integer" array="False" size=""/>
+            <assign variable="Dado" expression="lanzarDado()"/>
+            <output expression="&quot;El Dado es:&quot; &amp; Dado" newline="True"/>
+            <if expression="Dado Mod 2 = 0">
+                <then>
+                    <output expression="&quot;El numero es par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El numero es impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="Random(6)+1"/>
+        </body>
+    </function>
+</flowgorithm>
