@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="RetoCondicional2"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 02:23:21 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xOTswMjowODozMiBwLsKgbS47MzM5Nw=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xOTswMjoyMzoyMSBwLsKgbS47MTszNTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numero" type="Integer" array="False" size=""/>
+            <assign variable="Numero" expression="0"/>
+            <output expression="&quot;Ingrese un numero, porfavor&quot;" newline="True"/>
+            <input variable="Numero"/>
+            <if expression="abs(Numero) MOD 2 == 0">
+                <then>
+                    <output expression="&quot;El numero es PAR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El numero es IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
