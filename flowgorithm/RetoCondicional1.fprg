@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="....."/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 12:35:57 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xOTsxMjoxMToyMyBwLsKgbS47MzM5Mg=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xOTsxMjozNTo1NyBwLsKgbS47MjszNTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dado1" type="Integer" array="False" size=""/>
+            <declare name="Dado2" type="Integer" array="False" size=""/>
+            <assign variable="Dado1" expression="lanzarDado()"/>
+            <assign variable="Dado2" expression="lanzarDado()"/>
+            <output expression="&quot; INICIA EL JUEGO &quot;" newline="True"/>
+            <output expression="&quot; LANZAR DADOS &quot;" newline="True"/>
+            <output expression="&quot;El primer Dado cayo en:&quot; &amp; Dado1" newline="True"/>
+            <output expression="&quot;El segundo Dado cayo en:&quot; &amp; Dado2" newline="True"/>
+            <if expression="Dado1 MOD 2 == 0">
+                <then>
+                    <output expression="&quot;Dado1 es PAR &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dado1 es IMPAR &quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="Dado2 MOD 2 == 0">
+                <then>
+                    <output expression="&quot;Dado2 es PAR &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dado2 es IMPAR &quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="Dado1 == Dado2">
+                <then>
+                    <output expression="&quot;*** YOU WIN *** &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; --- GAME OVER --- &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="Random(6)+1"/>
+        </body>
+    </function>
+</flowgorithm>
