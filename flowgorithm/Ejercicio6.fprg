@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio6"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-14 01:21:42 a.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMzswNzoyNDo0NiBwLsKgbS47MzM5OQ=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMzswOTo1NTowOCBwLsKgbS47MTtVc3VhcmlvO0RFU0tUT1AtQ09QRzFMNDsyMDI1LTExLTEyOzExOjQ2OjIwIHAuwqBtLjtFamVyY2ljaW81LmZwcmc7ODQ1Nw=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xNDswMToyMTo0MiBhLsKgbS47MzszNDgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dado1" type="Integer" array="False" size=""/>
+            <declare name="Dado2" type="Integer" array="False" size=""/>
+            <declare name="sumarTiros" type="Integer" array="False" size=""/>
+            <declare name="tirosTotales" type="Integer" array="False" size=""/>
+            <declare name="sumaTotal" type="Integer" array="False" size=""/>
+            <declare name="paresGenerados" type="Integer" array="False" size=""/>
+            <declare name="imparesGenerados" type="Integer" array="False" size=""/>
+            <declare name="continuar" type="String" array="False" size=""/>
+            <assign variable="tirosTotales" expression="0"/>
+            <assign variable="sumaTotal" expression="0"/>
+            <assign variable="paresGenerados" expression="0"/>
+            <assign variable="imparesGenerados" expression="0"/>
+            <assign variable="continuar" expression="&quot;SI&quot;"/>
+            <output expression="&quot;INICIA EL JUEGO&quot;" newline="True"/>
+            <output expression="&quot;!LANZAR DADOS&#161;&quot;" newline="True"/>
+            <while expression="(continuar == &quot;SI&quot;) OR (continuar == &quot;si&quot;)">
+                <assign variable="Dado1" expression="lanzarDado()"/>
+                <assign variable="Dado2" expression="lanzarDado()"/>
+                <assign variable="sumarTiros" expression="Dado1 + Dado2"/>
+                <output expression="&quot;Lanzamiento: &quot; &amp; Dado1 &amp; &quot; y &quot; &amp; Dado2 &amp; &quot; (suma: &quot; &amp; sumarTiros &amp; &quot;)&quot;" newline="True"/>
+                <assign variable="tirosTotales" expression="tirosTotales + 1"/>
+                <assign variable="sumaTotal" expression="sumaTotal + sumarTiros"/>
+                <if expression="sumarTiros % 2 == 0">
+                    <then>
+                        <assign variable="paresGenerados" expression="paresGenerados + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="imparesGenerados" expression="imparesGenerados + 1"/>
+                    </else>
+                </if>
+                <output expression="&quot;&#191;Deseas volver a lanzar? (SI/NO)&quot;" newline="True"/>
+                <input variable="continuar"/>
+            </while>
+            <output expression="&quot;Total de tiros efectuados: &quot; &amp;   tirosTotales" newline="True"/>
+            <output expression="&quot;suma total de los tiros efectuados: &quot; &amp; sumaTotal" newline="True"/>
+            <output expression="&quot;Total de pares generados: &quot; &amp; paresGenerados" newline="True"/>
+            <output expression="&quot;Total de impares generados: &quot; &amp; imparesGenerados" newline="True"/>
+            <output expression="&quot; FIN DEL JUEGO &quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="Random(6)+1"/>
+        </body>
+    </function>
+</flowgorithm>
