@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio4"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-20 02:43:54 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0yMDsxMjo1MzozOSBwLsKgbS47MzM5Nw=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0yMDswMjo0Mzo1NCBwLsKgbS47MTszNTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dado1" type="Integer" array="False" size=""/>
+            <declare name="Dado2" type="Integer" array="False" size=""/>
+            <declare name="contarLanzamientos" type="Integer" array="False" size=""/>
+            <assign variable="Dado1" expression="0"/>
+            <assign variable="Dado2" expression="0"/>
+            <assign variable="contarLanzamientos" expression="0"/>
+            <output expression="&quot; INICIA EL JUEGO &quot;" newline="True"/>
+            <output expression="&quot; LANZAR DADOS &quot;" newline="True"/>
+            <while expression="(Dado1 != 6) OR (Dado2 != 6)">
+                <assign variable="contarLanzamientos" expression="contarLanzamientos + 1"/>
+                <assign variable="Dado1" expression="lanzarDado()"/>
+                <assign variable="Dado2" expression="lanzarDado()"/>
+                <output expression="&quot;Lanzamiento #&quot; &amp; contarLanzamientos &amp; &quot;: (&quot; &amp; Dado1 &amp; &quot;, &quot; &amp; Dado2 &amp; &quot;)&quot;" newline="True"/>
+            </while>
+            <output expression="&quot;&#161;PAR DE SEIS ENCONTRADO! Se necesitaron &quot; &amp; contarLanzamientos &amp; &quot; lanzamientos.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="random(6) + 1"/>
+        </body>
+    </function>
+</flowgorithm>
