@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio5"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-13 01:01:25 a.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMjsxMTo0NjoyMCBwLsKgbS47MzM4OQ=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMzswMTowMToyNSBhLsKgbS47MTszNDc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="resultadoDeTiros" type="Integer" array="False" size=""/>
+            <declare name="contarPares" type="Integer" array="False" size=""/>
+            <declare name="contarImpares" type="Integer" array="False" size=""/>
+            <assign variable="contarPares" expression="0"/>
+            <assign variable="contarImpares" expression="0"/>
+            <assign variable="N" expression="Veces()"/>
+            <assign variable="i" expression="0"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <assign variable="resultadoDeTiros" expression="lanzarDado()"/>
+                <if expression="((resultadoDeTiros MOD 2) == 0)">
+                    <then>
+                        <assign variable="contarPares" expression="contarPares + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="contarImpares" expression="contarImpares + 1"/>
+                    </else>
+                </if>
+                <output expression="&quot;Lanzamiento # &quot; &amp; i &amp; &quot;:cayo en &quot; &amp; resultadoDeTiros" newline="True"/>
+            </for>
+            <output expression="&quot;Total de Tiros PARES: &quot; &amp; contarPares" newline="True"/>
+            <output expression="&quot;Total de Tiros IMPARES: &quot; &amp; contarImpares" newline="True"/>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="Random(6)+1"/>
+        </body>
+    </function>
+    <function name="Veces" type="Integer" variable="Veces">
+        <parameters/>
+        <body>
+            <declare name="Veces" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese el numero de veces a lanzar&quot;" newline="True"/>
+            <input variable="Veces"/>
+        </body>
+    </function>
+</flowgorithm>
