@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio3"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-12 02:08:17 a.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMjsxMjoyNzozNSBhLsKgbS47MzM4MA=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMjsxMjozMzozNSBhLsKgbS47MTQ7VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMDsxMDo0MTo0MiBwLsKgbS47RWplcmNpY2lvMi5mcHJnOzg0NzY="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMjswMjowODoxNyBhLsKgbS47MTszNDg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroDeTiros" type="Integer" array="False" size=""/>
+            <declare name="Frecuencia" type="Integer" array="True" size="6"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="resultadoDeTiros" type="Integer" array="False" size=""/>
+            <for variable="j" start="0" end="5" direction="inc" step="1">
+                <assign variable="Frecuencia[j]" expression="0"/>
+            </for>
+            <assign variable="numeroDeTiros" expression="Veces()"/>
+            <for variable="i" start="1" end="numeroDeTiros" direction="inc" step="1">
+                <assign variable="resultadoDeTiros" expression="Random(6) + 1"/>
+                <assign variable="Frecuencia[resultadoDeTiros -1]" expression="Frecuencia[resultadoDeTiros - 1] + 1"/>
+                <output expression="&quot;Lanzamiento #&quot; &amp; i &amp; &quot;:cayo en: &quot; &amp; resultadoDeTiros" newline="True"/>
+            </for>
+            <output expression="&quot;------ Los resultados son: -------&quot;" newline="True"/>
+            <for variable="j" start="0" end="5" direction="inc" step="1">
+                <output expression="&quot; El numero &quot; &amp; (j+1) &amp; &quot; salio: &quot; &amp; Frecuencia[j] &amp; &quot; Veces&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="Random (6)+1"/>
+        </body>
+    </function>
+    <function name="Veces" type="Integer" variable="Veces">
+        <parameters/>
+        <body>
+            <declare name="Veces" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese el numero de veces a lanzar&quot;" newline="True"/>
+            <input variable="veces"/>
+        </body>
+    </function>
+</flowgorithm>
