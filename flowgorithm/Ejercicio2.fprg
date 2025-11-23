@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercio2"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-11 10:33:31 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMDsxMDo0MTo0MiBwLsKgbS47MzM4NQ=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUNPUEcxTDQ7MjAyNS0xMS0xMTsxMDozMzozMSBwLsKgbS47MjszNDk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroDeTiros" type="Integer" array="False" size=""/>
+            <declare name="sumaTotal" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="resultadoDeTiros" type="Integer" array="False" size=""/>
+            <assign variable="SumaTotal" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="numeroDeTiros" expression="Veces()"/>
+            <for variable="i" start="1" end="numeroDeTiros" direction="inc" step="1">
+                <assign variable="resultadoDeTiros" expression="lanzarDado()"/>
+                <assign variable="sumaTotal" expression="sumaTotal + resultadoDeTiros"/>
+                <output expression="&quot;Lanzamiento #&quot; &amp; i &amp; &quot;:cayo en&quot; &amp; resultadoDeTiros" newline="True"/>
+            </for>
+            <output expression="&quot;La suma total de los resultados es:&quot; &amp; sumaTotal" newline="True"/>
+            <output expression="&quot;Numero de tiros:&quot; &amp; numeroDeTiros" newline="True"/>
+        </body>
+    </function>
+    <function name="lanzarDado" type="Integer" variable="lanzarDado">
+        <parameters/>
+        <body>
+            <declare name="lanzarDado" type="Integer" array="False" size=""/>
+            <assign variable="lanzarDado" expression="Random (6)+1"/>
+        </body>
+    </function>
+    <function name="Veces" type="Integer" variable="Veces">
+        <parameters/>
+        <body>
+            <declare name="Veces" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese el numero de veces a lanzar&quot;" newline="True"/>
+            <input variable="veces"/>
+        </body>
+    </function>
+</flowgorithm>
